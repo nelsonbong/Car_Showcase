@@ -1,10 +1,11 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  output: 'export', // ✅ enable static export
   images: {
-    domains: ['cdn.imagin.studio']
-  }
+    unoptimized: true, // ✅ disable optimization for static export
+    domains: ['cdn.imagin.studio'], // keep your CDN whitelist
+  },
 };
 
 export default nextConfig;
